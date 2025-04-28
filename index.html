@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronaut Cat</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Astronaut Cat</h1>
+    
+    <div class="container">
+        <canvas id="webgl" width="800" height="600">
+            Your browser does not support WebGL
+        </canvas>
+        
+        <div class="controls">
+            <div class="control-group">
+                <h3>Global Controls</h3>
+                <div>
+                    <label for="global-rotation">Rotate Cat:</label>
+                    <input type="range" id="global-rotation" min="0" max="360" value="180">
+                </div>
+                <div>
+                    <label for="zoom-level">Zoom:</label>
+                    <input type="range" id="zoom-level" min="0.5" max="3.0" step="0.1" value="1.0">
+                </div>
+                <div>
+                    <button id="toggle-animation">Start Animation</button>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h3>Joint Controls</h3>
+                <div>
+                    <label for="head-angle">Head:</label>
+                    <input type="range" id="head-angle" min="-45" max="45" value="0">
+                </div>
+                <div>
+                    <label for="tail-angle">Tail:</label>
+                    <input type="range" id="tail-angle" min="-60" max="60" value="0">
+                </div>
+                <div>
+                    <label for="front-leg-angle">Front Leg:</label>
+                    <input type="range" id="front-leg-angle" min="-45" max="45" value="0">
+                </div>
+                <div>
+                    <label for="paw-angle">Paw:</label>
+                    <input type="range" id="paw-angle" min="-30" max="30" value="0">
+                </div>
+            </div>
+            
+            <div id="fps-counter">FPS: 0</div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <p>Use sliders to pose the astronaut cat. Click "Start Animation" to see the cat move.</p>
+        <p>Shift+Click to make the cat react!</p>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="js/matrix.js"></script>
+    <script src="js/shaders.js"></script>
+    <script src="js/primitives.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/animation.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
